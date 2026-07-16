@@ -1,9 +1,3 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
@@ -16,3 +10,177 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/* ===== Timer ===== */
+
+.timer-container {
+  padding-top: 36px;
+  padding-left: 156px;
+}
+
+.timer-controls {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+}
+
+#datetime-picker,
+[data-start] {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#datetime-picker {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+
+  background-color: #fff;
+  color: #2e2f42;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  outline: none;
+  transition: border-color 250ms ease;
+}
+
+#datetime-picker:hover {
+  border-color: #000000;
+}
+
+#datetime-picker:focus {
+  border-color: #4e75ff;
+}
+
+#datetime-picker:disabled {
+  border-color: #808080;
+  background-color: #fafafa;
+  color: #808080;
+  cursor: not-allowed;
+}
+
+[data-start] {
+  min-width: 75px;
+  height: 40px;
+  padding: 8px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #4e75ff;
+  color: #fff;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+[data-start]:hover:not(:disabled) {
+  background-color: #6c8cff;
+}
+
+[data-start]:disabled {
+  background-color: #cfcfcf;
+  color: #989898;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  width: fit-content;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #2e2f42;
+}
+
+/* ===== iziToast ===== */
+
+.iziToast.iziToast-color-red {
+  width: 302px;
+  min-height: 64px;
+  padding: 20px;
+
+  border: none;
+  border-bottom: 2px solid #ffbebe;
+  border-radius: 4px;
+
+  background: #ef4040;
+}
+
+.iziToast > .iziToast-body {
+  margin-left: 40px;
+}
+
+.iziToast.iziToast-color-red .iziToast-title {
+  margin-right: 8px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #fff !important;
+}
+
+.iziToast.iziToast-color-red .iziToast-message {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #fff !important;
+}
+
+.iziToast > .iziToast-close {
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 20px;
+  color: #fff !important;
+
+  opacity: 1;
+  filter: brightness(0) invert(1);
+}
+
+.iziToast.iziToast-color-red .iziToast-icon svg {
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
+.iziToast.iziToast-color-red .iziToast-icon {
+  filter: brightness(0) invert(1) !important;
+}
